@@ -5,6 +5,7 @@ plugins {
 android {
     namespace 'com.example.vtube'
     compileSdk 34
+    
 
     defaultConfig {
         applicationId "com.example.vtube"

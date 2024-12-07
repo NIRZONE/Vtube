@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         myWeb = findViewById(R.id.myWeb);
         myWeb.getSettings().setJavaScriptEnabled(true);
         myWeb.setWebViewClient(new WebViewClient());
+        myWeb.setWebChromeClient(new CustomWebChromeClient(MainActivity.this));
         myWeb.loadUrl("http://virtualtube.webflow.io/");
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
